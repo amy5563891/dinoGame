@@ -4,7 +4,6 @@ pipeline {
             image 'node:8.0.0-alpine'
             args '-p 3000:3000'
             args '-u root:root'
-            args '-c /bin/bash'
         }
     }
     environment {
@@ -19,7 +18,7 @@ pipeline {
         stage('Test') { 
             steps {
                 sh 'ls'
-                sh 'npm run test' 
+                sh '/bin/bash -c npm run test'
             }
         }
     }
