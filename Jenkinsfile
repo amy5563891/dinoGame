@@ -13,6 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm install'
+                sh 'apk add --no-cache bash'
             }
         }
         stage('Test') { 
