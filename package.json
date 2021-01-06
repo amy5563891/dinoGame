@@ -16,7 +16,7 @@
     "jest": "^26.6.3"
   },
   "scripts": {
-    "test": "jest --detectOpenHandles",
+    "test": "./node_modules/.bin/jest --updateSnapshot --detectOpenHandles",
     "start": "node server.js"
   },
   "keywords": [],
