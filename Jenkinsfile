@@ -18,7 +18,7 @@ pipeline {
         stage('Test') { 
             steps {
                 sh 'ls'
-                sh '/bin/bash -c npm run test'
+                sh 'npm run test'
             }
         }
     }
