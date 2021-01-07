@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:0.10.35'
+            image 'node'
             args '-p 3000:3000'
             args '-u root:root'
         }
@@ -17,7 +17,8 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                sh 'npm test' 
+                sh 'ls'
+                sh 'npm run test'
             }
         }
     }
