@@ -1,9 +1,6 @@
 {
   "name": "smartphone-controller-game",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/heartz/phone-controlled-web-game.git"
-  },
+  "repository": "https://github.com/heartz/phone-controlled-web-game.git",
   "version": "1.0.0",
   "description": "the trex runner game extracted from chrome offline err page.",
   "main": "index.js",
@@ -21,5 +18,6 @@
   },
   "keywords": [],
   "author": "HuiTing",
-  "license": "ISC"
+  "license": "ISC",
+  "private": true
 }
