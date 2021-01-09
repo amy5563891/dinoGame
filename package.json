@@ -6,7 +6,7 @@
   },
   "version": "1.0.0",
   "description": "the trex runner game extracted from chrome offline err page.",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
     "install": "^0.13.0",
