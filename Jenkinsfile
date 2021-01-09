@@ -12,6 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'rm -rf node_modules'
                 sh 'yarn install'
             }
         }
@@ -23,8 +24,10 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh 'yarn start'
+                sh 'yarn start & sleep 1'
+                sh 'echo $! > .pidfile'
+                input message: 'Finished using the web site? (Click "Proceed" to continue)' 
+                sh 'kill $(cat .pidfile)'
             }
         }
     }
-}
